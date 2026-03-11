@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  /* Sci-Fi Blue & White Theme - Much Darker Blues */
+  --color-sci-bg: #F8FAFC;
+  --color-sci-card: #FFFFFF;
+  --color-sci-primary: #075985;
+  --color-sci-secondary: #1E3A8A;
+  --color-sci-accent: #0C4A6E;
+  --color-sci-dark: #0F172A;
+  --color-sci-text-primary: #0F172A;
+  --color-sci-text-secondary: #334155;
+  --color-sci-glow: #0369A1;
+  --radius-3xl: 1.5rem;
+  --radius-xl: 0.75rem;
+}
+
+/* Simplified Background - Maximum Performance */
+body {
+  background: linear-gradient(135deg, #F8FAFC 0%, #E0F2FE 50%, #F8FAFC 100%);
+  color: var(--color-sci-text-primary);
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Minimal Grid - Static, no animations */
+.sci-fi-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(14, 165, 233, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.015) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Simplified Glass Card - No backdrop filter */
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(14, 165, 233, 0.15);
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.08);
+}
+
+/* Optimized Hover - Minimal effect */
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.12);
+}
+
+/* Simplified Pulse - Only for active states */
+@keyframes pulse-ring {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.pulse-ring {
+  animation: pulse-ring 1.5s ease-in-out infinite;
+}
+
+/* Minimal Shimmer */
+@keyframes shimmer {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* Performance optimizations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Disable all animations on low-end devices */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Force hardware acceleration for specific elements */
+.glass-card,
+.hover-lift {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
