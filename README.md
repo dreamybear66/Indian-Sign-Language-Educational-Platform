@@ -4,11 +4,6 @@
 
 <br/>
 
-<!-- Animated Banner -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=900&size=38&pause=800&color=4F8FFF&center=true&vCenter=true&width=900&lines=🤟+Indian+Sign+Language+Platform;Real-Time+Speech+→+ISL+Translator;AI-Powered+Accessibility+for+All;2%2C000%2B+Signs+•+30%2B+FPS+•+Sub-Second+Latency" alt="Animated header" />
-
-<br/><br/>
-
 <!-- Primary Badges -->
 <a href="https://github.com/dreamybear66/Indian-Sign-Language-Educational-Platform/stargazers"><img src="https://img.shields.io/github/stars/dreamybear66/Indian-Sign-Language-Educational-Platform?style=for-the-badge&color=FFD700&labelColor=1a1a2e&logo=github" /></a>
 <a href="https://github.com/dreamybear66/Indian-Sign-Language-Educational-Platform/network/members"><img src="https://img.shields.io/github/forks/dreamybear66/Indian-Sign-Language-Educational-Platform?style=for-the-badge&color=4F8FFF&labelColor=1a1a2e&logo=github" /></a>
